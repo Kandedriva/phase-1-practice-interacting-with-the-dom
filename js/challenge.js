@@ -36,8 +36,6 @@ heartContent.addEventListener("click", function(){
 li.textContent = `${time} has been like`
 likesList.appendChild(li);
 
-
-
 })
 
 
@@ -60,12 +58,13 @@ pauseTime.addEventListener("click", function(){
       
 pauseTime.textContent = "Resume"
   }else{
-    count = setInterval(function(){
-      time++;
-      decrement.disabled = false;
+    decrement.disabled = false;
       increment.disabled = false;
       heartContent.disabled = false;
       submitButton.disabled = false;
+    count = setInterval(function(){
+      time++;
+      
      timeCounter.textContent = time;
    },1000);
    pauseTime.textContent = "pause"
